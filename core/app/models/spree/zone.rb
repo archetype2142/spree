@@ -71,13 +71,13 @@ module Spree
     end
 
     def kind
-      if self&.dig(:kind)&.present?
-        self[:kind]
-      else
+      # if self&.dig(:kind)&.present?
+      #   self[:kind]
+      # else
         not_nil_scope = members.where.not(zoneable_type: nil)
         zone_type = not_nil_scope.order('created_at ASC').pluck(:zoneable_type).last
         zone_type&.demodulize&.underscore
-      end
+      # end
     end
 
     def country?
