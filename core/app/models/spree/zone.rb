@@ -71,7 +71,7 @@ module Spree
     end
 
     def kind
-      if self[:kind].present?
+      if self&.dig(:kind)&.present?
         self[:kind]
       else
         not_nil_scope = members.where.not(zoneable_type: nil)
