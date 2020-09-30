@@ -42,7 +42,7 @@
     <% end %>
 
     <%= f.field_container :category, class: ['form-group'] do %>
-      <%= f.label :promotion_category %>
+      <%= f.label Spree.t('promotion_category') %>
       <%= f.collection_select(:promotion_category_id, @promotion_categories, :id, :name, { include_blank: Spree.t('match_choices.none') }, { class: 'select2' }) %>
     <% end %>
   </div>
