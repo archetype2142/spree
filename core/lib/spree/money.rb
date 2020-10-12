@@ -12,7 +12,7 @@ module Spree
     self.default_formatting_rules = {
       # Ruby money currently has this as false, which is wrong for the vast
       # majority of locales.
-      sign_before_symbol: true
+      sign_before_symbol: false
     }
 
     attr_reader :money
