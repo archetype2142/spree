@@ -14,16 +14,16 @@ Spree.loadCarousel = function (element, div) {
   var productCarousel = $(div)
   var carouselLoaded = productCarousel.attr('data-product-carousel-loaded')
 
-  if (container.length && !carouselLoaded && container.isInViewport()) {
+  // if (container.length && !carouselLoaded && container.isInViewport()) {
     var taxonId = productCarousel.attr('data-product-carousel-taxon-id')
     productCarousel.attr('data-product-carousel-loaded', 'true')
 
     Spree.fetchProductCarousel(taxonId, container)
-  }
+  // }
 }
 
 Spree.loadsCarouselElements = function () {
-  document.querySelectorAll('div[data-product-carousel]').each(function (_index, element) { Spree.loadCarousel(element, this) })
+  $('div[data-product-carousel]').each(function (_index, element) { Spree.loadCarousel(element, this) })
 }
 
 document.addEventListener('turbolinks:load', function () {
