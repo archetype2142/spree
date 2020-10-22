@@ -29,7 +29,8 @@ Spree.loadsCarouselElements = function () {
 document.addEventListener('turbolinks:load', function () {
   var homePage = $('body#home')
   Spree.loadsCarouselElements()
-  
+  console.log("load")
+
   // if (homePage.length) {
   //   // load Carousels straight away if they are in the viewport
   //   Spree.loadsCarouselElements()
