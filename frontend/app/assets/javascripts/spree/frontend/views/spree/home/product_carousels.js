@@ -30,13 +30,13 @@ document.addEventListener('turbolinks:load', function () {
   var homePage = $('body#home')
   Spree.loadsCarouselElements()
   
-  if (homePage.length) {
-    // load Carousels straight away if they are in the viewport
-    Spree.loadsCarouselElements()
+  // if (homePage.length) {
+  //   // load Carousels straight away if they are in the viewport
+  //   Spree.loadsCarouselElements()
 
-    // load additional Carousels when scrolling down
-    $(window).on('resize scroll', function () {
-      Spree.loadsCarouselElements()
-    })
-  }
+  //   // load additional Carousels when scrolling down
+  //   $(window).on('resize scroll', function () {
+  //     Spree.loadsCarouselElements()
+  //   })
+  // }
 })
